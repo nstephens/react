@@ -24,6 +24,11 @@ The main motivation of this tool was to be able to trigger the execution of a
 test suite each time a source file of the project is modified. This speeds up
 my vim-based software development a lot.
 
+### Ingoring files that match a pattern
+ react.py -p '*' -x '^.+?\.sw.+?$' /tmp 'echo $f'
+
+The -x flag allows you to use regex patterns to ignore certain files.  The above example is helpful for not triggering events when Vi swap files are created.
+
 ### Setting file ACL entries
 `react.py /srv/www/team 'setfacl -m g:team:rwx $f'`
 
@@ -37,3 +42,4 @@ management will break. With react you can circumvent this problem.
 
  * Licence: [GPL 2.0](http://www.gnu.org/licenses/gpl-2.0.html)
  * Author: Alexander Bernauer (alex@copton.net)
+ * Additional work: Nick Stephens (nick@manipulate.org)
