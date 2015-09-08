@@ -5,6 +5,7 @@
  * [pyinotify](https://github.com/seb-m/pyinotify)
  * [Python 3.x](http://www.python.org/download/releases/3.2/) | [Python 2.x](http://www.python.org/download/releases/2.7.2/)
  * [argparse](http://pypi.python.org/pypi/argparse)
+ * [python-daemon](https://pypi.python.org/pypi/python-daemon/)
 
 ## Usage
 
@@ -38,6 +39,10 @@ directory with a default ACL entry, this file's ACL entries are not updated. In
 practice this means that sooner or later every default-ACL-based control
 management will break. With react you can circumvent this problem.
 
+
+### python-daemon
+
+Because my use case for this script was to provide automated execution of tasks based on file changes, python-daemon was implemented.  This will easily fork the process into the background.
 ## Information
 
  * Licence: [GPL 2.0](http://www.gnu.org/licenses/gpl-2.0.html)
